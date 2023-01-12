@@ -1,7 +1,15 @@
-div.container {
-  height: 300px;
-  width: 300px;
+#container {
+  min-height: 300px;
+  min-width: 300px;
   border-style: solid;
   border-width: 3px;
   border-color: aquamarine;
+}
+
+div {
+  height: 100px;
+  width: 100px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: gold;
 }
