@@ -12,9 +12,13 @@ for(i = 0; i < 256; i++) {
   //adds a mouseover event listener to the square div
   document.getElementById(i).addEventListener("mouseover", changeColor);
 
+  //changes square background color to blue when event is triggered
+  function changeColor(e) {
+    square.style.backgroundColor = "blue";
+    console.log(e.target);
+  }
+
 }
 
 
-function changeColor(e) {
-  console.log(e);
-}
+
