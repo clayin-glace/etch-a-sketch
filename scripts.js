@@ -20,5 +20,8 @@ for(i = 0; i < 256; i++) {
 
 }
 
+function changeGridSize() {
+  alert("testing");
+}
 
 
