@@ -21,7 +21,26 @@ for(i = 0; i < 256; i++) {
 }
 
 function changeGridSize() {
-  alert("testing");
+  let gridSize = null;
+
+  //limits user size input
+  gridSize = prompt("Please enter a size integer in range 1-100: ");
+    
+  if (gridSize == null) { //allows user to exit prompt by clicking cancel
+    alert("canceling");
+    return 0;
+  } else if (!Number.isInteger(Number(gridSize)) || gridSize.trim() == "") {
+    //Number() converts whitespace to 0, hence the gridSize.trim() == "" conditional
+    console.log(gridSize);
+    alert("Incorrect input, please enter an integer.");
+    changeGridSize();
+  } else if (gridSize < 1 || gridSize > 100) {
+    console.log(gridSize);
+    alert("Incorrect range, please try again.");
+    changeGridSize(); 
+  }
+
+  console.log("gridSize = " + gridSize);
 }
 
 
